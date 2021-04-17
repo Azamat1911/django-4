@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css'%}"
+</head>
+<body>
+    <h2>Привет проект на джанго</h2>
+    <p>
+        при помощи индексов
+    </p>
+
+    <ul>
+        <li>{{cars.0}}</li>
+        <li>{{cars.1}}</li>
+        <li>{{cars.2}}</li>
+        <li>{{cars.3}}</li>
+    </ul>
+    <p> При помощи цикла </p>
+    <ul>
+        {% for item in cars %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    <p> {{phone.name}} </p>
+    <p> {{phone.memory}} </p>
+    <p> {{phone.color}} </p>
+
+    <img src="{% static 'image/001.jpg'%}" width = "600">
+  
+</body>
+</html>

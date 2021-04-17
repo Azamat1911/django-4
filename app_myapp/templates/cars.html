@@ -1,0 +1,9 @@
+{% load static %}
+<p>
+    {% for item in carswimg %}
+    <div>
+        <img src="{% static item.img %}" width = "300">
+        <p> {{item.name}}</p>
+    </div>
+    {% endfor %}
+</p>
